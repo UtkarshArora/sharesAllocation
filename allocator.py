@@ -1,5 +1,3 @@
-import numpy as np
-
 def compute_cost(split, venues, order_size, lambda_over, lambda_under, theta_queue, fee=0.003, rebate=0.002):
     executed = 0
     cash_spent = 0.0
@@ -18,7 +16,7 @@ def compute_cost(split, venues, order_size, lambda_over, lambda_under, theta_que
     
     return cash_spent + risk_penalty + cost_penalty
 
-def allocate_dp_corrected(order_size, venues, lambda_over, lambda_under, theta_queue, step=100):
+def allocate(order_size, venues, lambda_over, lambda_under, theta_queue, step=100):
 
     n_venues = len(venues)
     
@@ -85,30 +83,3 @@ def allocate_dp_corrected(order_size, venues, lambda_over, lambda_under, theta_q
     else:
         return [0] * n_venues, float('inf')
 
-
-def allocate(order_size, venues, lambda_over, lambda_under, theta_queue, step=100):
-    return allocate_dp_corrected(order_size, venues, lambda_over, lambda_under, theta_queue, step)
-
-def test_allocator():
-    venues = [
-        {'ask_px_00': 50.0, 'ask_sz_00': 1000},
-        {'ask_px_00': 50.1, 'ask_sz_00': 2000},
-        {'ask_px_00': 50.2, 'ask_sz_00': 1500}
-    ]
-    
-    order_size = 1000
-    lambda_over = 0.4
-    lambda_under = 0.6
-    theta_queue = 0.3
-    
-    allocation, cost = allocate(order_size, venues, lambda_over, lambda_under, theta_queue)
-    
-    print(f"Test allocation: {allocation}")
-    print(f"Test cost: {cost}")
-    print(f"Total allocated: {sum(allocation)}")
-    
-    assert sum(allocation) == order_size, f"Allocation sum {sum(allocation)} != order_size {order_size}"
-    print("✓ Test passed!")
-
-if __name__ == "__main__":
-    test_allocator()

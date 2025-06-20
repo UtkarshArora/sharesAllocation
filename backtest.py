@@ -1,9 +1,6 @@
 import json
-import time
 from kafka import KafkaConsumer
 from datetime import datetime, timedelta
-
-
 from allocator import allocate
 
 
@@ -14,7 +11,8 @@ FEE = 0.003
 REBATE = 0.002
 
 #FEE AND REBATE USED FROM THE MODEL
-
+#USING DIFEERENT PARAMETER VALUES, THESE VALUES ARE COMMONLY USED IN MODELS -> AS MENTIONED IN THE PAPER, WE WILL FIND
+# THE BEST ONE FROM THESE 
 PARAM_GRID = [
     {"lambda_over": 0.2, "lambda_under": 0.2, "theta_queue": 0.1},
     {"lambda_over": 0.4, "lambda_under": 0.6, "theta_queue": 0.3},
