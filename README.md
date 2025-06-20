@@ -1,4 +1,4 @@
-1) video link: https://drive.google.com/file/d/1tSVifLbJi-FOvivPaS4ytbCI8d9MWpoH/view?usp=sharing
+1) video link: https://drive.google.com/file/d/18ElCKwhV6femQoP60A0fGGM92_nmlZzN/view?usp=sharing
 
 2) Commands to run Kafka(via Docker): 
 
@@ -30,8 +30,8 @@ https://drive.google.com/drive/folders/1a_wyKTmwTabvfDxNVJLi3rZ-Hqlu0MdD?usp=sha
             "avg_fill_px": 222.823456
         },
         "twap": {
-            "total_cash": 412941.573,
-            "avg_fill_px": 223.09107131280388
+            "total_cash": 173049.30800000002,
+            "avg_fill_px": 223.00168556701033
         },
         "vwap": {
             "total_cash": 1114117.28,
@@ -40,7 +40,7 @@ https://drive.google.com/drive/folders/1a_wyKTmwTabvfDxNVJLi3rZ-Hqlu0MdD?usp=sha
     },
     "savings_vs_baselines_bps": {
         "best_ask": 3.6107509256116233,
-        "twap": 15.602207240102334,
+        "twap": 11.600161960775798,
         "vwap": 3.6107509256116233
     }
 }
