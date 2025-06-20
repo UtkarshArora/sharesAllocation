@@ -1,4 +1,5 @@
-1) video link: 
+1) video link: https://drive.google.com/file/d/1tSVifLbJi-FOvivPaS4ytbCI8d9MWpoH/view?usp=sharing
+
 2) Commands to run Kafka(via Docker): 
 
 sudo apt update
@@ -7,8 +8,6 @@ sudo docker-compose up -d (since docker-compose.yml was already there in the rep
 docker ps
 
 3) Running producer and backtest:
-    
-    python kafka_producer.py
     python backtest.py
 
 4) Screenshots:

@@ -1,2 +1,3 @@
 __pycache__/allocator.cpython-312.pyc
 .DS_Store
+__pycache__/kafka_producer.cpython-312.pyc

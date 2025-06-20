@@ -2,6 +2,7 @@ import json
 from kafka import KafkaConsumer
 from datetime import datetime, timedelta
 from allocator import allocate
+from kafka_producer import kafka_producer
 
 
 KAFKA_TOPIC = "mock_11_stream"
@@ -154,6 +155,13 @@ def run_twap_simulation(snapshots, interval_seconds=60):
     return total_cash_spent, avg_fill_px
 
 def main():
+    print("--- Starting Data Production ---")
+    kafka_producer()
+    print("--- Data Production Finished ---")
+    
+    # --- End of Changes ---
+
+    print("\n--- Starting Consumer and Backtest ---")
     consumer = KafkaConsumer(
         KAFKA_TOPIC,
         bootstrap_servers=[KAFKA_BROKER],
