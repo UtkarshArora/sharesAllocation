@@ -1,7 +1,7 @@
 import time
 import json
 import csv
-from datetime import datetime, timedelta
+from datetime import datetime
 from dateutil import parser
 from kafka import KafkaProducer
 
